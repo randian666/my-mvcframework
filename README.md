@@ -2,18 +2,7 @@
 手写简洁版springmvc框架，包含ioc，DI等功能
 整体架构分为三部分
 1、配置阶段
-在web.xml中配置
-  <servlet>
-    <servlet-name>mymvc</servlet-name>
-    <servlet-class>com.app.my.framework.core.servlet.MDispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>application.properties</param-value>
-    </init-param>
-    <!--load-on-startup元素标记容器是否在启动的时候就加载这个servlet(实例化并调用其init()方法)。值越小，servlet的优先级越高，就越先被加载。-->
-    <load-on-startup>1</load-on-startup>
-
-</servlet>
+在web.xml中配置请求处理器MDispatcherServlet
 2、初始化阶段
 在MDispatcherServlet中的init方法中初始化，主要初始化以下内容：
 /**1、加载配置文件。web.xml中init-param指定的配置文件**/
