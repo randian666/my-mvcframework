@@ -1,13 +1,9 @@
 package com.app.my.framework.core.servlet;
 
-import com.app.my.framework.core.annotation.*;
-import javassist.ClassClassPath;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.bytecode.CodeAttribute;
-import javassist.bytecode.LocalVariableAttribute;
-import javassist.bytecode.MethodInfo;
+import com.app.my.framework.core.annotation.MAutowired;
+import com.app.my.framework.core.annotation.MController;
+import com.app.my.framework.core.annotation.MRequestMapping;
+import com.app.my.framework.core.annotation.MService;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -17,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.*;
 
