@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0" metadata-complete="true">
+
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+    <servlet-name>mymvc</servlet-name>
+    <servlet-class>com.app.my.framework.core.servlet.MDispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>application.properties</param-value>
+    </init-param>
+    <!--load-on-startup元素标记容器是否在启动的时候就加载这个servlet(实例化并调用其init()方法)。值越小，servlet的优先级越高，就越先被加载。-->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>mymvc</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>
